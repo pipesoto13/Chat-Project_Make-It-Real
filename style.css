@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.servers {
+    /* border: 2px solid red; */
+    height: 100vh;
+    color: beige;
+    background-color: darkslategrey;
+    
+}
+
+.mainChat {
+    /* border: 2px solid green; */
+    width: 100%;
+    background-color: dimgray;
+}
+
+.chatbox {
+    border: 1px solid black;
+}
+
+.inputMessage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    height: 50px;
+    width: 100%;
+    /* border: 1px solid salmon; */
+    position: absolute;
+    bottom: 0;
+}
+
+.inputMessage-text-img {
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    /* border: 1px dashed blue; */
+}
+
+.inputMessage input {
+    width: 70%;
+}
