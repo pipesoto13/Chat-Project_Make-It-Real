@@ -1,30 +1,92 @@
-body {
-    display: flex;
-    flex-direction: row;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
 }
 
-.servers {
-    /* border: 2px solid red; */
-    height: 100vh;
-    color: beige;
-    background-color: darkslategrey;
-    
+body {
+    background: rgb(66, 118, 153);
+}
+
+.window {
+    width: 900px;
+    border-radius: 0.7em;
+    height: 80vh;
+    padding: 10px;
+    margin: 4em auto;
+    background-color: #19171D;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.channels {
+    font-family: Verdana, Geneva, sans-serif;
+    height: 100%;
+    width: 250px;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin-right: 0.5em;
+    background-color:#19171D; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #757477;
+}
+
+.channels h1 {
+    font-size: 17px;
+    width: auto;
+    padding: 5px;
+    margin: 1+5px 5px 5px 15px ;
+}
+
+.channels ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 6px;
+    font-size: 15px;
+    margin: 0;
+}
+
+.channels li {
+    height: 28px;
+    padding: 0 16px;
+}
+
+.channels a{
+    color: #757477;
+    text-decoration: none;
 }
 
 .mainChat {
-    /* border: 2px solid green; */
-    width: 100%;
-    background-color: dimgray;
+    /* border: 1px solid #717779; */
+    border-radius: 0.5em;
+    padding: 0.5em;
+    background-color: #1a1d21;
+    display: flex;
 }
 
 .chatbox {
+    display: flex;
+    border: 1px solid black;  
+}
+
+.chatbox--txt {
     border: 1px solid black;
+    display: flex;
+    color: #bbc2cb;
+    flex-direction: column;
 }
 
 .inputMessage {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: green;
     margin: 5px;
     height: 50px;
     width: 100%;

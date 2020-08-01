@@ -7,31 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="servers">
-        <ul>
-            <li>#course</li>
-            <li>#blablabla</li>
-            <li>#bobadas</li>
-            <li>#material</li>
-        </ul>
-    </div>
-    <div class="mainChat">
-        <div class="chatbox">
-            <div>
-                <img src="http://lorempixel.com/50/50/people" alt="imagen persona">
-                <div>
-                    <strong>Name</strong>
-                    <p>17:00</p>
+    <main class="window">
+        <aside class="channels">
+            <h1>CHANNELS</h1>
+            <ul>
+                <li><a href="#">#course</a></li>
+                <li><a href="#">#blablabla</a></li>
+                <li><a href="#">#bobadas</a></li>
+                <li><a href="#">#material</a></li>
+            </ul>
+        </aside>
+        <section class="mainChat">
+            <div class="chatbox">           
+                <div class="chatbox--img">
+                    <img src="http://lorempixel.com/50/50/people" alt="imagen persona">
                 </div>
-                <p>Mensaje-------</p>
+                <div class="chatbox--info">                    
+                    <strong>Name</strong>
+                    <span>17:00</span>                    
+                </div>            
+                <span class="chatbox--message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste commodi explicabo quas natus similique, pariatur doloribus quasi, eveniet rerum dolor ut. Consectetur qui, nobis non iste voluptatum laudantium consequuntur voluptatem.</span>
             </div>
-        </div>
-        <div class="inputMessage">
-            <div class="inputMessage-text-img">
+            <form class="inputMessage">
                 <input type="text">
                 <button>E</button>
-            </div>
-        </div>
-    </div>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
