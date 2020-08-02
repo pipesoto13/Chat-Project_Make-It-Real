@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box ;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 body {
@@ -10,18 +11,19 @@ body {
 
 .window {
     width: 900px;
+    min-width: 400px;
     border-radius: 0.7em;
     height: 80vh;
     padding: 10px;
     margin: 4em auto;
     background-color: #19171D;
+    box-shadow: 20px 20px 50px 15px rgba(44, 44, 44, 0.616);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
 .channels {
-    font-family: Verdana, Geneva, sans-serif;
     height: 100%;
     width: 250px;
     border-radius: 0.5em;
@@ -68,39 +70,76 @@ body {
     padding: 0.5em;
     background-color: #1a1d21;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .chatbox {
-    display: flex;
-    border: 1px solid black;  
+    height: 90%;
+    margin-bottom: 1em;
+    /* border: 1px solid black; */
+    background: #1a1d21;  
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-.chatbox--txt {
-    border: 1px solid black;
+.chatbox--user {
     display: flex;
+    flex-flow: row nowrap;
     color: #bbc2cb;
-    flex-direction: column;
+    margin-bottom: 0.5em;
+    background: grey;
 }
 
-.inputMessage {
+.self.chatbox--user {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: green;
-    margin: 5px;
-    height: 50px;
-    width: 100%;
-    /* border: 1px solid salmon; */
-    position: absolute;
-    bottom: 0;
+    flex-flow: row-reverse nowrap;
+    background: darkblue;
 }
 
-.inputMessage-text-img {
-    margin: 5px;
-    padding: 5px;
+.self .chatbox--user--message #info{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 0.3em;
+    justify-content: right;
+    align-items: baseline;
+}
+
+.self .chatbox--user--message #info span{
+    padding-right: 1em;
+}
+
+.chatbox--user--img {
+    padding: 0.2em;
+}
+
+.chatbox--user--message {            
+    padding-left: 0.3em;
     width: 100%;
     /* border: 1px dashed blue; */
 }
+
+#info a {
+    color: #bbc2cb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#info span {
+    font-size: 12px;
+    margin-left: 0.5em;
+}
+
+.inputMessage {
+    background: #1a1d21;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    height: 50px;
+    border: 1px solid salmon; 
+}
+
 
 .inputMessage input {
     width: 70%;
