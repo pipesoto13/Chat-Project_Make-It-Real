@@ -55,13 +55,26 @@ body {
 }
 
 .channels li {
+    width: 100%;
     height: 28px;
     padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.channels li a:hover {
+    color: #1164a3;
 }
 
 .channels a{
     color: #757477;
     text-decoration: none;
+}
+
+.channels a.selected{
+    /* text-shadow: 0 0 30px #fff, 0 0 30px #fff, 0 0 30px #1164a3, 0 0 40px #1164a3, 0 0 50px #1164a3, 0 0 60px #1164a3, 0 0 70px #1164a3; */
+    color: #3095e2;
+    text-shadow: 0 0 10px #3095e2, 0 0 30px #3095e2c9, 0 0 50px #3095e29c;
 }
 
 .mainChat {
@@ -80,21 +93,30 @@ body {
     /* border: 1px solid black; */
     background: #1a1d21;  
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+.chatbox::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #747779;
 }
 
 .chatbox--user {
     display: flex;
     flex-flow: row nowrap;
     color: #bbc2cb;
-    margin-bottom: 0.5em;
-    background: grey;
+    margin-bottom: 0.7em;
+    /* background: grey; */
 }
 
 .self.chatbox--user {
     display: flex;
     flex-flow: row-reverse nowrap;
-    background: darkblue;
+    /* background: darkblue; */
 }
 
 .self .chatbox--user--message #info{
@@ -134,13 +156,44 @@ body {
     background: #1a1d21;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0.5em;
     height: 50px;
-    border: 1px solid salmon; 
+    /* border: 1px solid salmon;  */
 }
 
+.inputMessage--box {
+    border: 1px solid #747779;
+    border-radius: 3px;
+    width: 100%;
+    height: 34px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 .inputMessage input {
-    width: 70%;
+    font-size: 15px;
+    color: #bbc2cb;
+    width: 96%;
+    padding: 0.5em;
+    margin: 0;
+    height: 100%;
+    background: #222529;
+    border: none;
+    outline: none;
+}
+
+.inputMessage button {
+    background: #222529;
+    height: 100%;
+    width: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    
+}
+
+.inputMessage button img {
+    height: 21px;
+    filter: opacity(40%);
 }
