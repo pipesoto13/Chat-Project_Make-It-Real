@@ -9,7 +9,7 @@
 <body>
     <main class="window">
         <aside class="channels">
-            <h1>CHANNELS</h1>
+            <h2>CHANNELS</h2>
             <ul>
                 <li><a href="#">#course</a></li>
                 <li><a href="#">#blablabla</a></li>
@@ -19,12 +19,10 @@
         </aside>
         <section class="mainChat">
             <div class="chatbox">
-                <div class="chatbox--user friend">
-                    <div class="chatbox--user--img">
-                        <img src="http://lorempixel.com/50/50/people/1" alt="imagen persona">
-                    </div>
+                <div class="chatbox--user">
+                    <img src="http://lorempixel.com/50/50/people/1" alt="imagen persona">
                     <div class="chatbox--user--message">
-                        <div id="info">                    
+                        <div class="info">                    
                             <a href="#">Name</a>
                             <span class="date">17:00</span>                    
                         </div>            
@@ -36,7 +34,7 @@
                         <img src="http://lorempixel.com/50/50/people/2" alt="imagen persona">
                     </div>
                     <div class="chatbox--user--message">
-                        <div id="info">                    
+                        <div class="info">                    
                             <a href="#">Name</a>
                             <span>17:00</span>                    
                         </div>            
@@ -48,67 +46,17 @@
                         <img src="http://lorempixel.com/50/50/people/1" alt="imagen persona">
                     </div>
                     <div class="chatbox--user--message">
-                        <div id="info">                    
+                        <div class="info">                    
                             <a href="#">Name</a>
                             <span>17:00</span>                    
                         </div>            
                         <span id="message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste commodi explicabo quas natus similique, pariatur doloribus quasi, eveniet rerum dolor ut. Consectetur qui, nobis non iste voluptatum laudantium consequuntur voluptatem.</span>
                     </div>
-                </div>           
-                <div class="chatbox--user">
-                    <div class="chatbox--user--img">
-                        <img src="http://lorempixel.com/50/50/people/3" alt="imagen persona">
-                    </div>
-                    <div class="chatbox--user--message">
-                        <div id="info">                    
-                            <a href="#">Name</a>
-                            <span>17:00</span>                    
-                        </div>            
-                        <span id="message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste commodi explicabo quas natus similique, pariatur doloribus quasi, eveniet rerum dolor ut. Consectetur qui, nobis non iste voluptatum laudantium consequuntur voluptatem.</span>
-                    </div>
-                </div>           
-                <div class="chatbox--user">
-                    <div class="chatbox--user--img">
-                        <img src="http://lorempixel.com/50/50/people/4" alt="imagen persona">
-                    </div>
-                    <div class="chatbox--user--message">
-                        <div id="info">                    
-                            <a href="#">Name</a>
-                            <span>17:00</span>                    
-                        </div>            
-                        <span id="message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste commodi explicabo quas natus similique, pariatur doloribus quasi, eveniet rerum dolor ut. Consectetur qui, nobis non iste voluptatum laudantium consequuntur voluptatem.</span>
-                    </div>
-                </div>           
-                <div class="chatbox--user">
-                    <div class="chatbox--user--img">
-                        <img src="http://lorempixel.com/50/50/people/5" alt="imagen persona">
-                    </div>
-                    <div class="chatbox--user--message">
-                        <div id="info">                    
-                            <a href="#">Name</a>
-                            <span>17:00</span>                    
-                        </div>            
-                        <span id="message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste commodi explicabo quas natus similique, pariatur doloribus quasi, eveniet rerum dolor ut. Consectetur qui, nobis non iste voluptatum laudantium consequuntur voluptatem.</span>
-                    </div>
-                </div>           
-                <div class="chatbox--user">
-                    <div class="chatbox--user--img">
-                        <img src="http://lorempixel.com/50/50/people" alt="imagen persona">
-                    </div>
-                    <div class="chatbox--user--message">
-                        <div id="info">                    
-                            <a href="#">Name</a>
-                            <span>17:00</span>                    
-                        </div>            
-                        <span id="message">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste commodi explicabo quas natus similique, pariatur doloribus quasi, eveniet rerum dolor ut. Consectetur qui, nobis non iste voluptatum laudantium consequuntur voluptatem.</span>
-                    </div>
-                </div>           
+                </div>                     
             </div>
             <form class="inputMessage">
-                <div class="inputMessage--box">
-                    <input type="text" placeholder="Enviar mensaje a #course">
-                    <button><img src="send-icon.png" alt="send"></button>
-                </div>
+                <input type="text" placeholder="Enviar mensaje a #course">
+                <button type="button"><img src="send-icon.png" alt="send"></button>
             </form>
         </section>
     </main>

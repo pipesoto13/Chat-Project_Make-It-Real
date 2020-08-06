@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box ;
@@ -20,7 +20,6 @@ body {
     box-shadow: 20px 20px 50px 15px rgba(44, 44, 44, 0.616);
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
 }
 
 .channels {
@@ -36,7 +35,7 @@ body {
     color: #757477;
 }
 
-.channels h1 {
+.channels h2 {
     font-size: 17px;
     width: auto;
     padding: 5px;
@@ -72,28 +71,27 @@ body {
 }
 
 .channels a.selected{
-    /* text-shadow: 0 0 30px #fff, 0 0 30px #fff, 0 0 30px #1164a3, 0 0 40px #1164a3, 0 0 50px #1164a3, 0 0 60px #1164a3, 0 0 70px #1164a3; */
     color: #3095e2;
     text-shadow: 0 0 10px #3095e2, 0 0 30px #3095e2c9, 0 0 50px #3095e29c;
 }
 
 .mainChat {
-    /* border: 1px solid #717779; */
     border-radius: 0.5em;
-    padding: 0.5em;
+    padding: 0.4em;
     background-color: #1a1d21;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: start;
+    align-items: stretch;
 }
 
 .chatbox {
-    height: 90%;
-    margin-bottom: 1em;
-    /* border: 1px solid black; */
+    margin-bottom: 0.8em;
     background: #1a1d21;  
     overflow-x: hidden;
     overflow-y: auto;
+    flex: 1 1 auto;
 }
 
 .chatbox::-webkit-scrollbar {
@@ -110,76 +108,69 @@ body {
     flex-flow: row nowrap;
     color: #bbc2cb;
     margin-bottom: 0.7em;
-    /* background: grey; */
+    padding: 0.7em;
+    font-size: 14px;
 }
 
 .self.chatbox--user {
     display: flex;
     flex-flow: row-reverse nowrap;
-    /* background: darkblue; */
 }
 
-.self .chatbox--user--message #info{
+.self .chatbox--user--message .info{
     display: flex;
     flex-direction: row-reverse;
-    padding-right: 0.3em;
     justify-content: right;
     align-items: baseline;
 }
 
-.self .chatbox--user--message #info span{
-    padding-right: 1em;
-}
-
-.chatbox--user--img {
+.chatbox--user img {
     padding: 0.2em;
+    align-self: flex-start;
+    border-radius: 9px;
 }
 
 .chatbox--user--message {            
-    padding-left: 0.3em;
-    width: 100%;
-    /* border: 1px dashed blue; */
+    padding: 0 0.5em;
+    width: 81%;
 }
 
-#info a {
+.info {
+    margin-bottom: 0.3em;
+}
+
+.info a {
     color: #bbc2cb;
     text-decoration: none;
     font-weight: bold;
 }
 
-#info span {
+.info span {
     font-size: 12px;
-    margin-left: 0.5em;
     color: #747779;
+    padding: 0 0.7em;
 }
 
 .inputMessage {
-    background: #1a1d21;
+    background: #222529;
+    border: 1px solid #747779;
+    border-radius: 7px;
+    align-self: flex-end;
     display: flex;
+    justify-content: stretch;
     align-items: center;
     padding: 0.5em;
     height: 50px;
-    /* border: 1px solid salmon;  */
-}
-
-.inputMessage--box {
-    border: 1px solid #747779;
-    border-radius: 3px;
-    width: 100%;
-    height: 34px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .inputMessage input {
+    background: #222529;
     font-size: 15px;
     color: #bbc2cb;
     width: 96%;
     padding: 0.5em;
     margin: 0;
     height: 100%;
-    background: #222529;
     border: none;
     outline: none;
 }
@@ -187,7 +178,7 @@ body {
 .inputMessage button {
     background: #222529;
     height: 100%;
-    width: 30px;
+    flex-basis: 30px;
     border: none;
     display: flex;
     align-items: center;
