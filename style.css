@@ -124,6 +124,11 @@ body {
     align-items: baseline;
 }
 
+.self .chatbox--user--message span{
+    flex: 0 1 content;
+    align-self: flex-start;
+}
+
 .chatbox--user img {
     padding: 0.2em;
     align-self: flex-start;
