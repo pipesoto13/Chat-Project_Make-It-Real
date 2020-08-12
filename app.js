@@ -47,7 +47,7 @@ function printChatMessages(chatMessage) {
           <a class="info__name" href="#">${author.name}</a>
           <span class="info__date">${time}</span>                    
       </div>            
-      <span id="message">${content}</span>
+      <span class="message">${content}</span>
   </div>
   </div>`
 

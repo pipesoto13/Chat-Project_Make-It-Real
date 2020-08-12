@@ -125,8 +125,7 @@ body {
 }
 
 .self .chatbox--user--message span{
-    flex: 0 1 content;
-    align-self: flex-start;
+    align-self: flex-end;
 }
 
 .chatbox--user img {
@@ -141,6 +140,9 @@ body {
 .chatbox--user--message {            
     padding: 0 0.5em;
     width: 81%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .info {
