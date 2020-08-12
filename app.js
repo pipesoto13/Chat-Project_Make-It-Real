@@ -65,6 +65,13 @@ $.each(chatMessages, function (index, obj) {
   printChatMessages(obj);
 });
 
+//funcion para agregar clase selected a el canal seleccionado
+$('.channels a').on('click', function () { 
+  $('.channels a').removeClass('selected');
+  $(this).addClass('selected');
+})
+
+
 /* $(document).ready(function () {
   $(".inputMessage").on("click", function (e) {
     e.preventDefault();
