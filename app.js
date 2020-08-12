@@ -3,7 +3,8 @@ const $chatbox = $(".chatbox");
 const chatMessages = [
   {
     time: "16:25",
-    content: "Ab quasi fuga illum repellendus, praesentium tenetur consectetur error! Nemo, temporibus fugit. Aut asperiores autem totam necessitatibus quae repudiandae, labore nobis quos.",
+    content:
+      "Ab quasi fuga illum repellendus, praesentium tenetur consectetur error! Nemo, temporibus fugit. Aut asperiores autem totam necessitatibus quae repudiandae, labore nobis quos.",
     author: {
       name: "Damaris Bauch",
       image: "http://lorempixel.com/50/50/people/1",
@@ -35,12 +36,11 @@ const chatMessages = [
   },
 ];
 
-
 //funcion para imprimir mensajes en caja de chat
-function printChatMessages(chatMessage) { 
-  const {author, time, content} = chatMessage; //destructing de variable
+function printChatMessages(chatMessage) {
+  const { author, time, content } = chatMessage; //destructing de variable
 
-  const template= `<div class="chatbox--user">
+  const template = `<div class="chatbox--user">
   <img src="${author.image}" alt="imagen persona">
   <div class="chatbox--user--message">
       <div class="info">                    
@@ -49,7 +49,7 @@ function printChatMessages(chatMessage) {
       </div>            
       <span class="message">${content}</span>
   </div>
-  </div>`
+  </div>`;
 
   $chatbox.append(template);
 }
@@ -57,10 +57,15 @@ function printChatMessages(chatMessage) {
 //ciclo para iterar el arreglo de mensajes ya llamar funcion para imprimirlos
 $.each(chatMessages, function (index, obj) {
   printChatMessages(obj);
-  })
 
+  // condicional para agregar clase self a un nombre
+  if (obj.author.name === 'Branson Spencer') {
+    $('.chatbox--user:last').addClass('self');
+  }
 
-$(document).ready(function () {
+});
+
+/* $(document).ready(function () {
   $(".inputMessage").on("click", function (e) {
     e.preventDefault();
     console.log("boton presionado");
@@ -70,3 +75,4 @@ $(document).ready(function () {
     $(".chatbox").append(chatLog);
   });
 });
+ */
