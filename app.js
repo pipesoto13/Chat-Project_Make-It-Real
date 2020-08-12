@@ -52,17 +52,17 @@ function printChatMessages(chatMessage) {
   </div>`;
 
   $chatbox.append(template);
+
+  // condicional para agregar clase self a un nombre
+  if (author.name === 'Branson Spencer') {
+    $('.chatbox--user:last').addClass('self');
+  }
+
 }
 
 //ciclo para iterar el arreglo de mensajes ya llamar funcion para imprimirlos
 $.each(chatMessages, function (index, obj) {
   printChatMessages(obj);
-
-  // condicional para agregar clase self a un nombre
-  if (obj.author.name === 'Branson Spencer') {
-    $('.chatbox--user:last').addClass('self');
-  }
-
 });
 
 /* $(document).ready(function () {
