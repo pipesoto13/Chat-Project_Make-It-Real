@@ -12,12 +12,10 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    /* background: rgb(66, 118, 153); */
 }
 
 .window {
     width: 900px;
-    min-width: 400px;
     border-radius: 0.7em;
     height: 80vh;
     padding: 10px;
@@ -46,11 +44,26 @@ body {
     color: #757477;
 }
 
+.channels__title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-self: stretch;
+    border-bottom: 1px solid #757477;
+}
+
 .channels h2 {
     font-size: 17px;
     width: auto;
-    padding: 5px;
-    margin: 1+5px 5px 5px 15px ;
+    padding: 7px 12px;
+    flex: 1 1 auto;
+}
+
+.fa-plus-circle {
+    font-size: 18px;
+    padding: 7px;
+    color: rgb(66, 118, 153);
 }
 
 .channels ul {
@@ -209,4 +222,47 @@ body {
 .inputMessage button img {
     height: 21px;
     filter: opacity(40%);
+}
+
+@media (max-width: 576px) {
+    body {
+        justify-content: stretch;
+        align-items: stretch;
+        /* background: rgb(66, 118, 153); */
+    }
+
+    .window {
+        width: 100%;
+        border-radius: 0em;
+        height: 100vh;
+        margin: 0;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .channels {
+        margin-right: 0em;
+        padding: 0.3em;
+        flex: 0 1 100px; 
+        margin-bottom: 0.5em;
+    }
+    
+    .channels ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: stretch;
+        align-self: stretch;
+        padding: 4px;
+        overflow-x: scroll;
+    }
+
+    .channels ul::-webkit-scrollbar {
+        height: 10px;
+    }
+    
+    .channels ul::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: #747779;
+    }
 }
