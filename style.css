@@ -32,7 +32,6 @@ body {
 
 .channels {
     height: 100%;
-    /* width: 250px; */
     border-radius: 0.5em;
     padding: 0.5em;
     margin-right: 0.5em;
@@ -41,6 +40,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    /* flex: 0 1 200px; */
     color: #757477;
 }
 
@@ -48,16 +48,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     align-self: stretch;
     border-bottom: 1px solid #757477;
 }
 
 .channels h2 {
-    font-size: 17px;
-    width: auto;
-    padding: 7px 12px;
-    flex: 1 1 auto;
+    font-size: 16px;
+    padding: 7px 11px;
+    /* flex: 1 1 auto; */
 }
 
 .fa-plus-circle {
@@ -80,9 +80,22 @@ body {
 .channels li {
     width: 100%;
     height: 28px;
-    padding: 0 16px;
+    padding: 0 12px;
     display: flex;
     align-items: center;
+    justify-content: stretch;
+}
+
+.input__channel{
+    visibility: visible;
+    border: 1px solid #bbc2cb;
+    border-radius: 5px;
+    background: #222529;
+    align-self: stretch;
+    color: #757477;
+    padding: 7.5px;
+    width: 100px
+
 }
 
 .channels li a:hover {
@@ -115,7 +128,7 @@ body {
     margin-bottom: 1em;
     background: #1a1d21;  
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: scroll;
     flex: 1 1 auto;
 }
 
@@ -264,5 +277,10 @@ body {
     .channels ul::-webkit-scrollbar-thumb {
         border-radius: 5px;
         background: #747779;
+    }
+
+    .channels__title {
+        justify-content: space-between;
+        flex-wrap: nowrap;
     }
 }

@@ -36,6 +36,19 @@ const chatMessages = [
   },
 ];
 
+const channels = [
+  'course', 'blablabla', 'bobadas', 'material'
+];
+
+
+//funcion para imprimir canales en la lista
+function printChannels(channel) {
+  const template = `<li><a href="#">#${channel}</a></li>`
+
+  $('.channels ul').append(template);
+}
+
+
 //funcion para imprimir mensajes en caja de chat
 function printChatMessages(chatMessage) {
   const { author, time, content } = chatMessage; //destructing de variable
@@ -53,17 +66,24 @@ function printChatMessages(chatMessage) {
 
   $chatbox.append(template);
 
+
   // condicional para agregar clase self a un nombre
   if (author.name === 'Branson Spencer') {
     $('.chatbox--user:last').addClass('self');
   }
-
 }
+
+
+//ciclo para iterar el arreglo de canales ya llamar funcion para imprimirlos
+$.each(channels, function (index, obj) {
+  printChannels(obj);
+});
 
 //ciclo para iterar el arreglo de mensajes ya llamar funcion para imprimirlos
 $.each(chatMessages, function (index, obj) {
   printChatMessages(obj);
 });
+
 
 //funcion para agregar clase selected a el canal seleccionado
 $('.channels a').on('click', function () { 
