@@ -1,3 +1,5 @@
+const $inputMessage = $('.inputMessage input');
+const $btnSend = $('.inputMessage button');
 const $chatbox = $(".chatbox");
 
 const chatMessages = [
@@ -66,7 +68,6 @@ function printChatMessages(chatMessage) {
 
   $chatbox.append(template);
 
-
   // condicional para agregar clase self a un nombre
   if (author.name === 'Branson Spencer') {
     $('.chatbox--user:last').addClass('self');
@@ -74,15 +75,51 @@ function printChatMessages(chatMessage) {
 }
 
 
+//funcion que retorna el nombre del canal seleccionado
+function getChannel() {
+  let channelName = $('.channels ul li .selected').text();
+  return channelName.substr(1);
+}
+
+
+//funcion para enviar mensaje en el chat
+$btnSend.on('click', function (e) {  
+  e.preventDefault();
+  const value = $inputMessage.val();
+
+  if (value !== '') {
+    const message =  {
+      time: '19:45',
+      content: value,
+      author: {
+        name: "Branson Spencer",
+        image: "http://lorempixel.com/50/50/people/2",
+      }
+    };
+    printChatMessages(message);
+    chatMessages.push(message);
+    $inputMessage.val('');
+    $chatbox[0].scrollTo(0, $chatbox[0].scrollHeight);
+   /*  const container = document.querySelector(".chatbox");
+    container.scrollTo(0, container.scrollHeight); */
+  }
+
+})
+
+
 //ciclo para iterar el arreglo de canales ya llamar funcion para imprimirlos
 $.each(channels, function (index, obj) {
   printChannels(obj);
 });
 
+
 //ciclo para iterar el arreglo de mensajes ya llamar funcion para imprimirlos
 $.each(chatMessages, function (index, obj) {
   printChatMessages(obj);
 });
+
+
+//
 
 
 //funcion para agregar clase selected a el canal seleccionado

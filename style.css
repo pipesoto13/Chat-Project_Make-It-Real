@@ -94,7 +94,7 @@ body {
     align-self: stretch;
     color: #757477;
     padding: 7.5px;
-    width: 100px
+    width: auto;
 
 }
 
@@ -127,7 +127,6 @@ body {
 .chatbox {
     margin-bottom: 1em;
     background: #1a1d21;  
-    overflow-x: hidden;
     overflow-y: scroll;
     flex: 1 1 auto;
 }
@@ -136,9 +135,9 @@ body {
     width: 10px;
 }
 
-.chatbox::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background: #747779;
+    background: rgba(25,56,76,1);
 }
 
 .chatbox--user {
@@ -272,11 +271,6 @@ body {
 
     .channels ul::-webkit-scrollbar {
         height: 10px;
-    }
-    
-    .channels ul::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background: #747779;
     }
 
     .channels__title {
