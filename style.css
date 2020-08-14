@@ -31,7 +31,6 @@ body {
 }
 
 .channels {
-    height: 100%;
     border-radius: 0.5em;
     padding: 0.5em;
     margin-right: 0.5em;
@@ -250,6 +249,7 @@ body {
         margin: 0;
         flex-direction: column;
         flex-wrap: nowrap;
+        justify-content: stretch;
     }
 
     .channels {
@@ -276,5 +276,9 @@ body {
     .channels__title {
         justify-content: space-between;
         flex-wrap: nowrap;
+    }
+
+    .mainChat {
+        overflow-y: hidden;
     }
 }
