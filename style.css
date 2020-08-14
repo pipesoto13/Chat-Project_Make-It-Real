@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -38,8 +40,8 @@ body {
     flex: 0 1 350px; 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    /* flex: 0 1 200px; */
+    align-items: stretch;
+    justify-content: flex-start;
     color: #757477;
 }
 
@@ -66,6 +68,7 @@ body {
 }
 
 .channels ul {
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -242,6 +245,31 @@ body {
     font-size: 21px;
     color: #1164a3;
     filter: opacity(40%);
+}
+
+/* estilos para reloj */
+.clock{
+    width: 100%;
+    flex: 0 1 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    padding: 0 10px;
+    box-shadow: -3px -3px 7px rgba(255,255,255,0.05),
+                3px 3px 5px rgba(0,0,0,0.5);
+}
+
+.clock .display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 10px;
+    color: #3095e2;
+    text-shadow: 0 0 10px #3095e2, 0 0 30px #3095e2c9, 0 0 50px #3095e29c;
+    letter-spacing: 5px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 @media (max-width: 576px) {
