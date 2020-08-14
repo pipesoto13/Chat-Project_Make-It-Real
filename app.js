@@ -119,24 +119,12 @@ $.each(chatMessages, function (index, obj) {
 });
 
 
-//
-
-
 //funcion para agregar clase selected a el canal seleccionado
 $('.channels a').on('click', function () { 
   $('.channels a').removeClass('selected');
   $(this).addClass('selected');
+
+  //imrprimir el canal seleccionado en el input Message
+  $inputMessage.attr('placeholder' , `Enviar mensaje a #${getChannel()}`)
 })
 
-
-/* $(document).ready(function () {
-  $(".inputMessage").on("click", function (e) {
-    e.preventDefault();
-    console.log("boton presionado");
-    var $message = $(".inputMessage input").val();
-    console.log($message);
-    $(".inputMessage input").val("");
-    $(".chatbox").append(chatLog);
-  });
-});
- */
