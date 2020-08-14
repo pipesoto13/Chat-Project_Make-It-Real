@@ -222,16 +222,25 @@ body {
 
 .inputMessage button {
     background: #222529;
-    height: 100%;
+    height: 70%;
     flex-basis: 30px;
     border: none;
     display: flex;
     align-items: center;
-    
+    outline: none;
+    cursor: pointer;
 }
 
-.inputMessage button img {
-    height: 21px;
+.inputMessage button:active {
+    color: #3095e2;
+    filter: opacity(100%);
+    font-size: 25px;
+    text-shadow: 0 0 10px #3095e2, 0 0 30px #3095e2c9, 0 0 50px #3095e29c;
+}
+
+.inputMessage button i {
+    font-size: 21px;
+    color: #1164a3;
     filter: opacity(40%);
 }
 

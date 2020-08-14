@@ -88,10 +88,12 @@ $btnSend.on('click', function (e) {
   const value = $inputMessage.val();
 
   if (value !== '') {
+    //hora y minuto de mensaje
     const timeNow = new Date();
     const timeHour = timeNow.getHours();
     const timeMinute = timeNow.getMinutes();
 
+    //mensaje a enviar
     const message =  {
       time: `${timeHour}:${timeMinute}`,
       content: value,
