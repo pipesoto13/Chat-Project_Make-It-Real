@@ -318,4 +318,12 @@ body {
     .mainChat {
         overflow-y: hidden;
     }
+
+    .inputMessage {
+        margin: 0.7em 0.7em;
+    }
+
+    .chatbox {
+        margin-bottom: 0.4em;
+    }
 }
